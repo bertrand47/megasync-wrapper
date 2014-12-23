@@ -42,6 +42,6 @@ if __name__ == '__main__':
     subst_icons_folder = os.path.dirname(os.path.realpath(__file__)) + '/icons/'
     
     mega_icon = icons_folder + 'megasync_{0}_5e6bbab03e062640f0a3c6c540f119a7.png'.format(pid)
-    shutil.copy(subst_icons_folder + 'megasync.png', mega_icon)megasync
+    shutil.copy(subst_icons_folder + 'megasync.png', mega_icon)
     mega_icon1 = icons_folder + 'megasync_{0}_a8fb04239cb3d37ca409bd8a55eaa7d8.png'.format(pid)
     shutil.copy(subst_icons_folder + 'megasync1.png', mega_icon1)
