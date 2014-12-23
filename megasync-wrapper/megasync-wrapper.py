@@ -18,7 +18,12 @@ def is_running(process):
     return False
 
 if __name__ == '__main__':
-
+    icons_map = [
+        ('5e6bbab03e062640f0a3c6c540f119a7', 'megasync_start.png'),
+        ('a8fb04239cb3d37ca409bd8a55eaa7d8', 'megasync_idle.png'),
+        ('58ebdeee7b844ca4da145dcf572f322c', 'megasync_sync.png'),
+        ('42214812629c8b59f19722c2b22938d3', 'megasync_pause.png')
+    ]
     if is_running(mega_bin):
         print 'MEGAsync already running'
         subprocess.call([mega_bin]);
@@ -41,9 +46,9 @@ if __name__ == '__main__':
 
     subst_icons_folder = os.path.dirname(os.path.realpath(__file__)) + '/icons/'
     
-    mega_icon = icons_folder + 'megasync_{0}_5e6bbab03e062640f0a3c6c540f119a7.png'.format(pid)
-    shutil.copy(subst_icons_folder + 'megasync.png', mega_icon)
-    os.chmod(mega_icon, stat.S_IRUSR)
-    mega_icon1 = icons_folder + 'megasync_{0}_a8fb04239cb3d37ca409bd8a55eaa7d8.png'.format(pid)
-    shutil.copy(subst_icons_folder + 'megasync1.png', mega_icon1)
-    os.chmod(mega_icon1, stat.S_IRUSR)
+    for (uid, subst_icon) in icons_map:
+        mega_icon = icons_folder + 'megasync_{0}_{1}.png'.format(pid, uid)
+        shutil.copy(subst_icons_folder + subst_icon, mega_icon)
+        os.chmod(mega_icon, stat.S_IRUSR)
+    
+
