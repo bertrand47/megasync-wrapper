@@ -2,7 +2,7 @@
 This wrapper replaces the inconsistent (and awful) MEGAsync tray icon with an elementary-styled monochrome icon.
 
 #Screenshot
-![The new icons](d)
+![The new icons](https://raw.githubusercontent.com/cybre/megasync-wrapper/master/Preview.png)
 
 #Usage
 
